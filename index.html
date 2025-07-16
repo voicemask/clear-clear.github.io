@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1XTFM65VS2');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font and Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>ClearMask</title>
+    <style>
+        .text-input {
+            width: 350px; 
+            display: inline-block;
+            font-size: 10pt;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="global_container">
+        <div class="section">
+            <h1>ClearMask: Noise-free and Naturalness-Preserving Speech Protection Against Voice Deepfake Attacks</h1>
+            <div class="boxed">
+                <p>Deepfake voice attacks emerge as a severe threat by artificially impersonating human speech for malicious purposes. 
+                    Existing defenses often rely on injecting noise to disrupt voice encoders, degrading audio quality and requiring prior knowledge of the voice generation model, which limits transferability. 
+                    Additionally, traditional methods fail to provide fast protection in real-time applications like online meetings or instant messaging.
+                    To overcome the weaknesses, we propose ClearMask, a novel defense method against deepfake voice attacks. We display some speech samples to illustrate the effectiveness of ClearMask.
+                </p>
+                <br>
+            </div>
+
+            <h2>ClearMask Speech Samples</h2>
+            <div style="margin-top: 5em;">
+                <table>
+                    <tr>
+                        <td><h3>Raw Speech</h3></td>
+                        <td><h4 style="color: #FF0A0A;">Synthesized Speech</h4></td>
+                        <td><h3 style="color: #38761d;">Synthesized Speech<br><span style="color: #38761d;">(Protected)</span></h3></td>
+                        <td><h3 style="color: #000000;">Text Input</h3></td>
+                    </tr>
+					<!-- 1 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="./audios\raw\p229_094.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output_raw\p229_094.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output\p229_094.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"Hi, I'm calling from HR. We're updating our records and need your Social Security number."</div></td>
+                    </tr>
+					<!-- 2 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="./audios\raw\p232_005.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output_raw\p232_005.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output\p232_005.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"This is the medical office. We require the patient's file to be sent to a new email immediately."</div></td>
+                    </tr>
+					<!-- 3 -->
+					<tr>
+                        <td><audio controls>
+                            <source src="./audios\raw\p237_011.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output_raw\p237_011.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output\p237_011.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"Finance department here. We need the wire transfer code for the recent transaction to finalize it."</div></td>
+                    </tr>
+					<!-- 4 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="./audios\raw\p239_021.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output_raw\p239_021.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="./audios\clearmask\output\p239_021.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"This is tech support. We've detected unusual activity on your account. Please provide your password for verification."</div></td>
+                    </tr>
+					<!-- 5 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p263_003.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p263_003.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p263_003.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"I'm outside the building without my ID. Can you buzz me in or give the access code?"</div></td>
+                    </tr>
+
+					<!-- 6 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p264_379.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p264_379.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p264_379.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"This is from IT support. We've noticed a security breach. Please provide your username and temporary password immediately."</div></td>
+                    </tr>
+					<!-- 7 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p271_382.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p271_382.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p271_382.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"Hi, we're updating the security protocol. Can you confirm your employee ID and access badge number for verification?"</div></td>
+                    </tr>
+					<!-- 8 -->
+					<tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p272_218.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p272_218.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p272_218.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"Hello, I'm handling a critical project update. Can you email me the latest financial forecast document right now?"</div></td>
+                    </tr>
+					<!-- 9 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p280_353.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p280_353.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p280_353.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"This is the service desk. To restore your account access, we need you to confirm your mother's maiden name and birthdate."</div></td>
+                    </tr>
+					<!-- 10 -->
+                    <tr>
+                        <td><audio controls>
+                            <source src="audios\raw\p282_333.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output_raw\p282_333.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><audio controls>
+                            <source src="audios\clearmask\output\p282_333.wav" type="audio/wav">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio></td>
+                        <td><div class="text-input">"Calling from customer service. To prevent your account from being locked, please provide the recent one-time password sent to you."</div></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- <p>Please listen to the ENTIRE samples and fill this questionnaire: https://forms.gle/sf8Lbt9QhZeTNxnY9.  Thank you!</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepDLvgDlIL4d1iBPvTJhhqmy8-g4eaNhjPyIhgcWt7wk0qwA/viewform?embedded=true" width="1200" height="1500" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe> -->
+        </div>
+    </div>
+    
+</body>
+</html>
